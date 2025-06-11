@@ -2,21 +2,26 @@ package com.ligadefutbol.entities.Jugador;
 
 public class JugadorTitular extends Jugador{
 
-    private int partidosDesdeBanco;
+    private long minutosJugados;
 
     public JugadorTitular(){
 
     }
     public JugadorTitular(String nombreCompleto, int edad){
         super(nombreCompleto, edad);
-        this.partidosDesdeBanco = 0;
+        this.minutosJugados = 0;
     }
 
-    public int getPartidosDesdeBanco() {
-        return partidosDesdeBanco;
+    public long getMinutosJugados() {
+        return minutosJugados;
     }
 
-    public void setPartidosDesdeBanco(int partidosDesdeBanco) {
-        this.partidosDesdeBanco = partidosDesdeBanco;
+    public void setMinutosJugados(long minutosJugados) {
+        this.minutosJugados = minutosJugados;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + " - Titular";
     }
 }

@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Partido {
 
-    private static List<Partido> listaPartidos = new ArrayList<Partido>();
+
 
     private List<Equipo> equipos;
     private Equipo ganador;
@@ -13,7 +13,7 @@ public class Partido {
     private List<GolesPorPartidoPorJugador> golesPorPartidoPorJugadors;
 
     public Partido(){
-        listaPartidos.add(this);
+
     }
 
     public Partido(List<Equipo> equipos,
@@ -23,7 +23,6 @@ public class Partido {
         this.ganador = null;
         empate = true;
         this.golesPorPartidoPorJugadors = golesPorPartidoPorJugadors;
-        listaPartidos.add(this);
     }
 
     public Partido(List<Equipo> equipos,
@@ -34,12 +33,9 @@ public class Partido {
         this.ganador = ganador;
         empate = false;
         this.golesPorPartidoPorJugadors = golesPorPartidoPorJugadors;
-        listaPartidos.add(this);
     }
 
-    public static List<Partido> getListaPartidos() {
-        return listaPartidos;
-    }
+
 
     public List<Equipo> getEquipos() {
         return equipos;
