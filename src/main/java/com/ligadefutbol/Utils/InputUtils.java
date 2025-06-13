@@ -1,23 +1,29 @@
 package com.ligadefutbol.Utils;
 
+import javax.swing.text.StyledEditorKit;
 import java.util.Scanner;
 
 public class InputUtils {
 
-    public static long leerEnteroPositivo(Scanner scanner){
-        while(true){
+    public static long leerEnteroPositivo(){
+        Scanner scanner = new Scanner(System.in);
+        int entero = 0;
+        boolean flag = Boolean.TRUE;
+        while(flag){
             String input = scanner.nextLine();
-            scanner.nextLine();
             try {
-                int entero = Integer.parseInt(input);
-                if (entero < 0) {
+                entero = Integer.parseInt(input);
+                if (entero < 1) {
                     System.out.println("Debe ingresar un numero positivo");
-                    continue;
                 }
-                return entero;
+                else {
+                    flag = Boolean.FALSE;
+                }
             } catch (NumberFormatException e) {
                 System.out.println("No ha ingresado un valor entero valido");
             }
         }
+        return entero;
+
     }
 }
